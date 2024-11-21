@@ -1,6 +1,3 @@
-<!--============================
-    MENU START
-=============================-->
 <nav class="navbar navbar-expand-lg main_menu">
     <div class="container">
         <a class="navbar-brand" href="/">
@@ -46,7 +43,7 @@
                     @auth
                         <a href="{{ route('profile.edit') }}" class="common_btn">Profile</a>
 
-                        <a href="{{ route('login') }}" class="common_btn">Logout</a>
+                        <a href="{{ route('logout') }}" class="common_btn">Logout</a>
                     @else
                         <a href="{{ route('login') }}" class="common_btn">Login</a>
                     @endauth
@@ -55,6 +52,4 @@
         </div>
     </div>
 </nav>
-<!--============================
-    MENU END
-=============================-->
+
