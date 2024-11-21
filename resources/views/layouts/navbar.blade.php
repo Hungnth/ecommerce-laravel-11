@@ -34,7 +34,7 @@
                 <li>
                     <a href="#" class="wsus__manu_cart icon">
                             <span>
-                                <img src="images/cart_icon_black.svg" alt="cart" class="img-fluid">
+                                <img src="{{ asset('assets/images/cart_icon_black.svg') }}" alt="cart" class="img-fluid">
                                 <b>2</b>
                             </span>
                     </a>
