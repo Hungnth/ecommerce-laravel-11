@@ -16,7 +16,6 @@ class ProductPageController extends Controller
 
     public function show($id)
     {
-        // session()->flush();
         $product = Product::findOrFail($id);
         return view('pages.product-details', compact('product'));
     }

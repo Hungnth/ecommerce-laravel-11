@@ -15,7 +15,8 @@
                             </div>
                             <span class="new">new</span>
                             <div class="text">
-                                <a href="{{ route('product-details', $product->id) }}" class="title">{{ $product->name }}</a>
+                                <a href="{{ route('product-details', $product->id) }}"
+                                   class="title">{{ $product->name }}</a>
                                 <p>
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>

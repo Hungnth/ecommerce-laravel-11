@@ -32,7 +32,27 @@ class AddToCartController extends Controller
         return response([
             'status' => 'success',
             'message' => 'Product added to cart successfully!',
-            'cart_count' => 0,
+            'cart_count' => count($this->cart),
+        ]);
+    }
+
+    public function destroy($id) {
+        $cartItems = $this->cart;
+        unset($cartItems[$id]);
+        Session::put('cart', $cartItems);
+        notyf('Product removed from cart!', 'success');
+
+        return redirect()->back();
+    }
+
+    public function updateQty(Request $request) {
+        $cartItems = $this->cart;
+        $cartItems[$request->id]['qty'] = $request->qty;
+        Session::put('cart', $cartItems);
+        notyf('Product quantity updated!', 'success');
+
+        return response([
+            'status' => 'success'
         ]);
     }
 }
